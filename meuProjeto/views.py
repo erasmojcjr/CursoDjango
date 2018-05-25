@@ -9,8 +9,9 @@ def home(request):
         {'nome': 'Pollyanna', 'sexo': 'f'}
 
     ]
+    nome = 'Erasmo'
 
-    variaveis = {'lista': lista}
+    variaveis = {'lista': lista, 'nome': nome}
     return render(request, 'index.html', variaveis)
 
 

@@ -1,26 +1,23 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+{% extends 'base.html' %}
 
-    <ul>
-        {% for pessoa in lista %}
+    {% block title %} seja bem vindo {% endblock title %}
 
-            {% if pessoa.sexo == 'm' or pessoa.sexo == 'M' %}
-                <li>Olá senhor {{ pessoa.nome }}</li>
-            {% elif pessoa.sexo == 'f' or pessoa.sexo == 'F' %}
-                <li>Ola senhora {{ pessoa.nome }}</li>
-            {% else %}
-                <li>ola {{ pessoa.nome }}</li>
-            {% endif %}
+    {% block main %}
+    <h1 class="programe_facil">Ola Mundo</h1>
+        <ul>
+            {% for pessoa in lista %}
 
-        {% endfor %}
-    </ul>
+                {% if pessoa.sexo == 'm' or pessoa.sexo == 'M' %}
+                    <li>Olá senhor {{ pessoa.nome }}</li>
+                {% elif pessoa.sexo == 'f' or pessoa.sexo == 'F' %}
+                    <li>Ola senhora {{ pessoa.nome }}</li>
+                {% else %}
+                    <li>ola {{ pessoa.nome }}</li>
+                {% endif %}
+                {{nome}}
+            {% endfor %}
+        </ul>
+        <button class="btn btn-info" onclick="olaMundo()">Clique Aqui</button>
+    {% include 'footer.html' with pnome=nome %}
+    {% endblock main %}
 
-
-</head>
-<body>
-
-</body>
-</html>
