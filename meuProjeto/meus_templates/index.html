@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <ul>
+        {% for pessoa in lista %}
+
+            {% if pessoa.sexo == 'm' or pessoa.sexo == 'M' %}
+                <li>Olá senhor {{ pessoa.nome }}</li>
+            {% elif pessoa.sexo == 'f' or pessoa.sexo == 'F' %}
+                <li>Ola senhora {{ pessoa.nome }}</li>
+            {% else %}
+                <li>ola {{ pessoa.nome }}</li>
+            {% endif %}
+
+        {% endfor %}
+    </ul>
+
+
+</head>
+<body>
+
+</body>
+</html>
