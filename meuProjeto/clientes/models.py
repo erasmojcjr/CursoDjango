@@ -36,6 +36,7 @@ class Cliente(models.Model):
     cpf = models.OneToOneField(CPF, on_delete=models.CASCADE) # relacionamento entre tabela 1 para 1
     limitecredito = models.ForeignKey(Limitecredito, on_delete=models.CASCADE, null=True, blank=True)
     banco = models.ManyToManyField(Banco, blank=True, null=True) # muito para muitos
+    foto = models.ImageField(upload_to='clientes_fotos', blank=True, null=True)
 
     #usado para retornar a lista em nome no lugar de objeto
     def __str__(self):

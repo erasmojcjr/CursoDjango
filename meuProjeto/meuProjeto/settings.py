@@ -121,6 +121,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = 'statics_files'
+MEDIA_URL = '/media/'
+MEDIA_ROOT = 'media_files'
 
 STATICFILES_DIRS = [
     'meus_statics',
